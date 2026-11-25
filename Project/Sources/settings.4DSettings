@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences stamp="2">
+	<com.4d>
+		<compiler>
+			<typage default_for_numeric="1"/>
+		</compiler>
+		<database>
+			<misc accept_dot_syntax="true" store_unicode_tokens="true"/>
+		</database>
+		<web>
+			<standalone_server>
+				<configuration publish_at_startup="false"/>
+				<rest launch_at_startup="false"/>
+			</standalone_server>
+		</web>
+	</com.4d>
+</preferences>

@@ -1,0 +1,28 @@
+{
+	"dependencies": {
+		"AJUI_Button": {
+			"github": "AJARProject/AJUI_Button_source",
+			"version": "2.2.1"
+		},
+		"AJUI_Banner": {
+			"github": "AJARProject/AJUI_Banner_source",
+			"version": "1.9.0"
+		},
+		"AJUI_Tip": {
+			"github": "AJARProject/AJUI_Tip_source",
+			"version": "1.8.1"
+		},
+		"AJ_Math": {
+			"github": "AJARProject/AJ_Math_source",
+			"version": "2.1.1"
+		},
+		"4D Widgets": {
+			"github": "4d/4D-Widgets",
+			"version": "4d"
+		},
+		"4D SVG": {
+			"github": "4d/4D-SVG",
+			"version": "4d"
+		}
+	}
+}
