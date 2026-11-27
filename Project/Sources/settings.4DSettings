@@ -4,6 +4,7 @@
 		<compiler>
 			<typage default_for_numeric="1"/>
 		</compiler>
+		<general execute_host_database_event="true"/>
 		<database>
 			<misc accept_dot_syntax="true" store_unicode_tokens="true"/>
 		</database>

@@ -15,9 +15,9 @@ Case of
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnDelete"))
 			If (Form.invoice_items#Null) && (Form.invoice_items.length>1)
-				Form.tipDelete.TextLabel("Delete the invoice lines")
+				Form.tipDelete.TextLabel(L10n("trTipDeleteLineOther"))
 			Else 
-				Form.tipDelete.TextLabel("Delete the invoice line")
+				Form.tipDelete.TextLabel(L10n("trTipDeleteLineOne"))
 			End if 
 			Form.tipDelete.Show()
 		End if 

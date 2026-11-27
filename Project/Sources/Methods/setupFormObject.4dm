@@ -18,7 +18,7 @@ $setup_obj.tot_nextYear:=0
 $setup_obj.ribbon:=New AJUI_Banner
 $setup_obj.ribbon.BannerType("cornerRibbon")
 $setup_obj.ribbon.BannerName("resume")
-$setup_obj.ribbon.Message("No filter")
+$setup_obj.ribbon.Message(L10n("trRibbonNoFilter"))
 $setup_obj.ribbon.BannerPosition("top-right")
 $setup_obj.ribbon.TextColor("White")
 $setup_obj.ribbon.TextFontSize(18)

@@ -1,4 +1,4 @@
-﻿{
+{
 	"$4d": {
 		"version": "1",
 		"kind": "form"
@@ -40,7 +40,7 @@
 					"type": "listbox",
 					"left": 3,
 					"top": 83,
-					"width": 1020,
+					"width": 1014,
 					"height": 499,
 					"events": [
 						"onLoad"
@@ -63,10 +63,10 @@
 						{
 							"header": {
 								"name": "Entête1",
-								"text": "Date"
+								"text": ":xliff:trPrintHeaderDate"
 							},
 							"name": "Colonne1",
-							"width": 90,
+							"width": 72,
 							"dataSource": "This:C1470.invoice_date",
 							"footer": {
 								"name": "Pied1",
@@ -75,11 +75,11 @@
 								"dataSourceTypeHint": "text",
 								"fontWeight": "bold"
 							},
-							"dateFormat": "short"
+							"dateFormat": "dd.MM.yyyy"
 						},
 						{
 							"header": {
-								"text": "invoice",
+								"text": ":xliff:trPrintHeaderInvoice",
 								"name": "invoice_head"
 							},
 							"name": "Column1",
@@ -99,7 +99,7 @@
 						{
 							"header": {
 								"name": "start_head",
-								"text": "start"
+								"text": ":xliff:trPrintHeaderStart"
 							},
 							"name": "date_start_col",
 							"footer": {
@@ -109,14 +109,14 @@
 							"dataSource": "This:C1470.start",
 							"dataSourceTypeHint": "date",
 							"enterable": false,
-							"width": 90,
+							"width": 72,
 							"maxWidth": 100,
-							"dateFormat": "short"
+							"dateFormat": "dd.MM.yyyy"
 						},
 						{
 							"header": {
 								"name": "end_head",
-								"text": "end"
+								"text": ":xliff:trPrintHeaderEnd"
 							},
 							"name": "date_end_col",
 							"footer": {
@@ -126,14 +126,14 @@
 							"dataSourceTypeHint": "date",
 							"dataSource": "This:C1470.end",
 							"enterable": false,
-							"width": 90,
+							"width": 72,
 							"maxWidth": 100,
-							"dateFormat": "short"
+							"dateFormat": "dd.MM.yyyy"
 						},
 						{
 							"header": {
 								"name": "amount_inv_head",
-								"text": "Total"
+								"text": ":xliff:trPrintHeaderTotal"
 							},
 							"name": "Column4",
 							"footer": {
@@ -149,13 +149,13 @@
 							"dataSource": "This:C1470.amount_invoiced",
 							"numberFormat": "|Schweiz",
 							"enterable": false,
-							"width": 90,
-							"maxWidth": 100
+							"width": 130,
+							"maxWidth": 130
 						},
 						{
 							"header": {
 								"name": "rate_head",
-								"text": "rate"
+								"text": ":xliff:trPrintHeaderRate"
 							},
 							"name": "rate",
 							"footer": {
@@ -166,13 +166,13 @@
 							"dataSource": "This:C1470.rate",
 							"numberFormat": "|Schweiz2",
 							"enterable": false,
-							"width": 70,
+							"width": 62,
 							"maxWidth": 100
 						},
 						{
 							"header": {
 								"name": "amount_pay_head",
-								"text": "Payed"
+								"text": ":xliff:trPrintHeaderPaid"
 							},
 							"name": "amount_invoiced_eur",
 							"footer": {
@@ -189,13 +189,13 @@
 							"method": "",
 							"numberFormat": "|Schweiz",
 							"enterable": false,
-							"width": 90,
-							"maxWidth": 100
+							"width": 130,
+							"maxWidth": 130
 						},
 						{
 							"header": {
 								"name": "days_current_year_head",
-								"text": "days_current",
+								"text": ":xliff:trPrintHeaderDays",
 								"dataSource": ""
 							},
 							"name": "days_start_col",
@@ -207,13 +207,13 @@
 							"dataSourceTypeHint": "number",
 							"dataSource": "This:C1470.days_currentyear",
 							"enterable": false,
-							"width": 90,
+							"width": 78,
 							"maxWidth": 100
 						},
 						{
 							"header": {
 								"name": "days_next_year_head",
-								"text": "days_next",
+								"text": ":xliff:trPrintHeaderDays",
 								"dataSource": ""
 							},
 							"name": "days_end_col",
@@ -224,13 +224,13 @@
 							"dataSourceTypeHint": "number",
 							"dataSource": "This:C1470.days_nextyear",
 							"enterable": false,
-							"width": 90,
+							"width": 78,
 							"maxWidth": 100
 						},
 						{
 							"header": {
 								"name": "amount_this_year_head",
-								"text": "amount_current",
+								"text": ":xliff:trPrintHeaderAmount",
 								"dataSource": ""
 							},
 							"name": "Column9",
@@ -253,7 +253,7 @@
 						{
 							"header": {
 								"name": "amount_next_year_head",
-								"text": "amount_next",
+								"text": ":xliff:trPrintHeaderAmount",
 								"dataSource": ""
 							},
 							"name": "Column10",
@@ -310,7 +310,7 @@
 					"top": 691,
 					"width": 304,
 					"height": 17,
-					"dataSource": "String:C10(Current date:C33)+\", \"+String:C10(Current time:C178)",
+					"dataSource": "String:C10(Current date:C33;\"dd.MM.yyyy\")+\", \"+String:C10(Current time:C178;\"HH:mm:ss\")",
 					"dataSourceTypeHint": "text",
 					"enterable": false,
 					"focusable": false,

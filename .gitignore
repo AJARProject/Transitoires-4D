@@ -47,3 +47,7 @@ Folder_Reports
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# 4DPop / 4DPop XLIFF Pro: compiled components and per-developer preferences (see OUTILS-DEV.md)
+/LocalComponents/
+/Preferences/4DPop XLIFF.settings

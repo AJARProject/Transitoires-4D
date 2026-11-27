@@ -81,6 +81,12 @@ If ($placeholder#"")
 Else 
 	$placeholder:=String($params.flabelPlaceholders[$target])
 End if 
+  // A placeholder set in the form as ":xliff:resname" comes back as that reference,
+  // not as its translation, so it is resolved here before it is shown as the label.
+  // https://developer.4d.com/docs/21-R4/commands/object-get-placeholder
+If (Position(":xliff:"; $placeholder; *)=1)
+	$placeholder:=L10n(Substring($placeholder; 8))
+End if 
 
 If (($params.offset=Null) || (Value type($params.offset)=Is undefined))
 	$offset:=0

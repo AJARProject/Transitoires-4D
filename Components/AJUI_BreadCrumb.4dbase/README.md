@@ -6,7 +6,7 @@ Sources du composant [AJUI_Breadcrumb](https://github.com/AJARProject/AJUI_Bread
 
 **4D 21 R4**, mode projet, `compatibilityVersion` 2140. Version **1.3.0** : `AJUI_BC_info` renvoie `AJUI BreadCrumb (v21 R4): 1.3.0`. Licence MIT (`LICENSE`).
 
-Cette migration a été réalisée avec l'aide de Cursor et de Grok Bot. Détail : [MIGRATION-21R4.md](MIGRATION-21R4.md).
+Détail de la migration : [MIGRATION-21R4.md](MIGRATION-21R4.md).
 
 ## Installation rapide
 
@@ -33,8 +33,6 @@ Form.bc1.Draw()
 
 `AJUI_Breadcrumb.new()` expose la même surface via la classe `cs.Breadcrumb`.
 
-Réalisé avec Cursor / Grok Bot (Codesky) pour Maurice Inzirillo.
-
 ---
 
 # AJUI_BreadCrumb
@@ -45,7 +43,7 @@ Sources of the [AJUI_Breadcrumb](https://github.com/AJARProject/AJUI_Breadcrumb)
 
 **4D 21 R4**, project mode, `compatibilityVersion` 2140. Version **1.3.0**: `AJUI_BC_info` returns `AJUI BreadCrumb (v21 R4): 1.3.0`. MIT licence (`LICENSE`).
 
-This migration was made with the help of Cursor and Grok Bot. Details: [MIGRATION-21R4.md](MIGRATION-21R4.md).
+Migration details: [MIGRATION-21R4.md](MIGRATION-21R4.md).
 
 ## Short install
 
@@ -71,5 +69,3 @@ Form.bc1.Draw()
 ```
 
 `AJUI_Breadcrumb.new()` exposes the same surface through the `cs.Breadcrumb` class.
-
-Made with Cursor / Grok Bot (Codesky) for Maurice Inzirillo.

@@ -2,7 +2,7 @@
   // deleteSelection ( {optionShortcut} )
   // Drop every unlocked invoice in the highlighted selection.
   // Protected invoices (locked = True) are never dropped.
-  // No parameter (list-box menu): the English confirm is always shown.
+  // No parameter (list-box menu): the confirm is always shown.
   // optionShortcut True (trash): Option skips only that confirm and sets OK to 1.
   // Trash with an empty selection falls back to Form.invoice_item.
 
@@ -21,7 +21,7 @@ Else
 		return 
 	End if 
 	If (Form.invoice_item=Null) || (Form.currentInvoice.UUID="")
-		ALERT("Select an invoice")
+		ALERT(L10n("trMsgSelectInvoice"))
 		return 
 	End if 
 	If (Form.currentInvoice.UUID#Form.invoice_item.UUID)
@@ -36,9 +36,9 @@ End if
 
 If ($toDrop.length=0)
 	If ($selectedCount<=1)
-		ALERT("Cette facture est \"protect\", elle ne peut pas être supprimée.")
+		ALERT(L10n("trMsgProtectedOne"))
 	Else 
-		ALERT("Ces factures sont protégées, elles ne peuvent pas être supprimées.")
+		ALERT(L10n("trMsgProtectedOther"))
 	End if 
 Else 
 	If ($optionShortcut) && (Macintosh option down)
@@ -46,9 +46,9 @@ Else
 	Else 
 		If ($toDrop.length=1)
 			$invoiceRef:=$toDrop.first().invoice_ref
-			CONFIRM("Do you want to delete the invoice : "+$invoiceRef; "YES"; "NO")
+			CONFIRM(L10n("trConfirmDeleteInvoice"; $invoiceRef); L10n("trBtnYes"); L10n("trBtnNo"))
 		Else 
-			CONFIRM("Do you want to delete the selection ?"; "Yes"; "No")
+			CONFIRM(L10n("trConfirmDeleteSelection"); L10n("trBtnYes"); L10n("trBtnNo"))
 		End if 
 	End if 
 	If (OK=1)
@@ -58,16 +58,12 @@ Else
 		reloadListAndInputArea
 		If ($notDropped.length=0)
 			If ($protected.length>0)
-				ALERT(String($protected.length)+" facture(s) protégée(s) conservée(s).")
+				ALERT(L10n_count("trMsgProtectedKept"; $protected.length))
 			Else 
-				If ($count=1)
-					ALERT("Invoice deleted")
-				Else 
-					ALERT("Invoices deleted")
-				End if 
+				ALERT(L10n_count("trMsgInvoiceDeleted"; $count))
 			End if 
 		Else 
-			ALERT(String($notDropped.length)+" invoice(s) not deleted")
+			ALERT(L10n_count("trMsgNotDeleted"; $notDropped.length))
 		End if 
 	End if 
 End if 

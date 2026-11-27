@@ -7,7 +7,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "HelpPicker"))
-			Form.tipSearchPicker.TextLabel("Start/End : 01.01.20...05.05.20 Date : 01.01&05.05")
+			Form.tipSearchPicker.TextLabel(L10n("trTipSearchHelp"))
 			Form.tipSearchPicker.Show()
 		End if 
 		

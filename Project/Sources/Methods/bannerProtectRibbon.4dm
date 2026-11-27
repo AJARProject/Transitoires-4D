@@ -8,7 +8,7 @@ var $left; $top; $right; $bottom : Integer
 Form.btnProtectBanner:=New AJUI_Banner
 Form.btnProtectBanner.BannerType("cornerRibbon")
 Form.btnProtectBanner.BannerName("protect")
-Form.btnProtectBanner.Message("Locked")
+Form.btnProtectBanner.Message(L10n("trRibbonLocked"))
 Form.btnProtectBanner.BannerPosition("top-right")
 Form.btnProtectBanner.TextColor("White")
 Form.btnProtectBanner.TextFontSize(20)

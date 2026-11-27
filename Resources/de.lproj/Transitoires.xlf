@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Transitoires interface strings. Source language: English.
+     One file per language in Resources/<lang>.lproj/. The language is the one chosen in the
+     Language menu (saved per user), applied in On Startup; Automatic = system language. Keys: camelCase, prefix "tr".
+     state="needs-review-translation": first translation, to be reviewed. -->
+<xliff version="1.2">
+	<file original="Transitoires" datatype="x-STR#" source-language="en" target-language="de">
+		<body>
+			<group id="menus" resname="menus">
+				<trans-unit id="trMenuTransitoires" resname="trMenuTransitoires">
+					<source>Accruals and Deferrals</source>
+					<target state="needs-review-translation">Transitorische Posten</target>
+					<note>Menu item that opens the Input window (was the French "Transitoire").</note>
+				</trans-unit>
+				<trans-unit id="trMenuTestData" resname="trMenuTestData">
+					<source>Test data</source>
+					<target state="needs-review-translation">Testdaten</target>
+					<note>Menu item, calls DEV_seedFakeData (was the French "Données de test").</note>
+				</trans-unit>
+				<trans-unit id="trMenuFile" resname="trMenuFile">
+					<source>File</source>
+					<target state="needs-review-translation">Ablage</target>
+					<note>Menu title (menu bar built by Menu_build). macOS names: DE Ablage, IT Archivio.</note>
+				</trans-unit>
+				<trans-unit id="trMenuEdit" resname="trMenuEdit">
+					<source>Edit</source>
+					<target state="needs-review-translation">Bearbeiten</target>
+					<note>Menu title.</note>
+				</trans-unit>
+				<trans-unit id="trMenuLanguage" resname="trMenuLanguage">
+					<source>Language</source>
+					<target state="needs-review-translation">Sprache</target>
+					<note>Menu title of the Language menu.</note>
+				</trans-unit>
+				<trans-unit id="trMenuMode" resname="trMenuMode">
+					<source>Mode</source>
+					<target state="needs-review-translation">Modus</target>
+					<note>Menu title (switch to Design).</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemQuit" resname="trMenuItemQuit">
+					<source>Quit</source>
+					<target state="needs-review-translation">Beenden</target>
+					<note>Menu item, standard action quit (Cmd+Q). macOS moves it to the application menu.</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemUndo" resname="trMenuItemUndo">
+					<source>Undo</source>
+					<target state="needs-review-translation">Widerrufen</target>
+					<note>Menu item, standard action undo (Cmd+Z).</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemCut" resname="trMenuItemCut">
+					<source>Cut</source>
+					<target state="needs-review-translation">Ausschneiden</target>
+					<note>Menu item, standard action cut (Cmd+X).</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemCopy" resname="trMenuItemCopy">
+					<source>Copy</source>
+					<target state="needs-review-translation">Kopieren</target>
+					<note>Menu item, standard action copy (Cmd+C).</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemPaste" resname="trMenuItemPaste">
+					<source>Paste</source>
+					<target state="needs-review-translation">Einsetzen</target>
+					<note>Menu item, standard action paste (Cmd+V).</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemClear" resname="trMenuItemClear">
+					<source>Clear</source>
+					<target state="needs-review-translation">Löschen</target>
+					<note>Menu item, standard action clear.</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemSelectAll" resname="trMenuItemSelectAll">
+					<source>Select All</source>
+					<target state="needs-review-translation">Alles auswählen</target>
+					<note>Menu item, standard action selectAll (Cmd+A).</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemShowClipboard" resname="trMenuItemShowClipboard">
+					<source>Show Clipboard</source>
+					<target state="needs-review-translation">Zwischenablage einblenden</target>
+					<note>Menu item, standard action showClipboard.</note>
+				</trans-unit>
+				<trans-unit id="trMenuItemDesign" resname="trMenuItemDesign">
+					<source>Design</source>
+					<target state="needs-review-translation">Designmodus</target>
+					<note>Menu item, standard action design (back to the Design environment).</note>
+				</trans-unit>
+				<trans-unit id="trMenuLanguageAuto" resname="trMenuLanguageAuto">
+					<source>Automatic (system language)</source>
+					<target state="needs-review-translation">Automatisch (Systemsprache)</target>
+					<note>Language menu: follow the language of the system user (fr, de, it, en, otherwise English).</note>
+				</trans-unit>
+				<trans-unit id="trLanguageNameFr" resname="trLanguageNameFr" translate="no">
+					<source>Français</source>
+					<target>Français</target>
+					<note>Language menu: name of the language in that language. Not translated.</note>
+				</trans-unit>
+				<trans-unit id="trLanguageNameDe" resname="trLanguageNameDe" translate="no">
+					<source>Deutsch</source>
+					<target>Deutsch</target>
+					<note>Language menu: name of the language in that language. Not translated.</note>
+				</trans-unit>
+				<trans-unit id="trLanguageNameIt" resname="trLanguageNameIt" translate="no">
+					<source>Italiano</source>
+					<target>Italiano</target>
+					<note>Language menu: name of the language in that language. Not translated.</note>
+				</trans-unit>
+				<trans-unit id="trLanguageNameEn" resname="trLanguageNameEn" translate="no">
+					<source>English</source>
+					<target>English</target>
+					<note>Language menu: name of the language in that language. Not translated.</note>
+				</trans-unit>
+			</group>
+			<group id="Input" resname="Input">
+				<trans-unit id="trInputWindowTitle" resname="trInputWindowTitle">
+					<source>Accruals and Deferrals</source>
+					<target state="needs-review-translation">Transitorische Posten</target>
+					<note>Window title of the Input form (31 characters max). Was "window title".</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderInvoice" resname="trInputHeaderInvoice">
+					<source>Invoice</source>
+					<target state="needs-review-translation">Rechnung</target>
+					<note>List box header.</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderDate" resname="trInputHeaderDate">
+					<source>Date</source>
+					<target state="needs-review-translation">Datum</target>
+					<note>List box header (80 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderStart" resname="trInputHeaderStart">
+					<source>Start</source>
+					<target state="needs-review-translation">Beginn</target>
+					<note>List box header (80 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderEnd" resname="trInputHeaderEnd">
+					<source>End</source>
+					<target state="needs-review-translation">Ende</target>
+					<note>List box header (80 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderAmountInvoiced" resname="trInputHeaderAmountInvoiced">
+					<source>Amount invoiced</source>
+					<target state="needs-review-translation">Rechnungsbetrag</target>
+					<note>List box header.</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderRate" resname="trInputHeaderRate">
+					<source>Rate</source>
+					<target state="needs-review-translation">Kurs</target>
+					<note>List box header: exchange rate.</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderAmountPaid" resname="trInputHeaderAmountPaid">
+					<source>Amount paid</source>
+					<target state="needs-review-translation">Bezahlter Betrag</target>
+					<note>List box header (was "amount payed").</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderDaysCurrentYear" resname="trInputHeaderDaysCurrentYear">
+					<source>Days current year</source>
+					<target state="needs-review-translation">Tage laufendes Jahr</target>
+					<note>List box header.</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderDaysNextYear" resname="trInputHeaderDaysNextYear">
+					<source>Days next year</source>
+					<target state="needs-review-translation">Tage Folgejahr</target>
+					<note>List box header.</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderAmountCurrentYear" resname="trInputHeaderAmountCurrentYear">
+					<source>Amount this year</source>
+					<target state="needs-review-translation">Betrag laufendes Jahr</target>
+					<note>List box header.</note>
+				</trans-unit>
+				<trans-unit id="trInputHeaderAmountNextYear" resname="trInputHeaderAmountNextYear">
+					<source>Amount next year</source>
+					<target state="needs-review-translation">Betrag Folgejahr</target>
+					<note>List box header.</note>
+				</trans-unit>
+				<trans-unit id="trInputPhInvoiceRef" resname="trInputPhInvoiceRef">
+					<source>Invoice reference</source>
+					<target state="needs-review-translation">Rechnungsnummer</target>
+					<note>Placeholder and floating label (145 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputPhStartDate" resname="trInputPhStartDate">
+					<source>Start date</source>
+					<target state="needs-review-translation">Beginndatum</target>
+					<note>Placeholder and floating label (115 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputPhEndDate" resname="trInputPhEndDate">
+					<source>End date</source>
+					<target state="needs-review-translation">Enddatum</target>
+					<note>Placeholder and floating label (115 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputPhAmountInvoiced" resname="trInputPhAmountInvoiced">
+					<source>Amount invoiced</source>
+					<target state="needs-review-translation">Rechnungsbetrag</target>
+					<note>Placeholder and floating label (115 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputPhAmountPaid" resname="trInputPhAmountPaid">
+					<source>Amount paid</source>
+					<target state="needs-review-translation">Bezahlter Betrag</target>
+					<note>Placeholder and floating label (115 px). Was "Amount payed".</note>
+				</trans-unit>
+				<trans-unit id="trInputPhRate" resname="trInputPhRate">
+					<source>Rate</source>
+					<target state="needs-review-translation">Kurs</target>
+					<note>Placeholder and floating label (115 px): exchange rate.</note>
+				</trans-unit>
+				<trans-unit id="trInputPhInvoiceDate" resname="trInputPhInvoiceDate">
+					<source>Invoice date</source>
+					<target state="needs-review-translation">Rechnungsdatum</target>
+					<note>Placeholder and floating label (115 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputDiscount" resname="trInputDiscount">
+					<source>Discount</source>
+					<target state="needs-review-translation">Rabatt</target>
+					<note>Static text (66 px).</note>
+				</trans-unit>
+				<trans-unit id="trInputFilters" resname="trInputFilters">
+					<source>Filters</source>
+					<target state="needs-review-translation">Filter</target>
+					<note>Static text, class Title2 (155 px).</note>
+				</trans-unit>
+				<trans-unit id="trTipSave" resname="trTipSave">
+					<source>Save</source>
+					<target state="needs-review-translation">Speichern</target>
+					<note>Tooltip of the save button.</note>
+				</trans-unit>
+				<trans-unit id="trTipAddLine" resname="trTipAddLine">
+					<source>Add a new line</source>
+					<target state="needs-review-translation">Neue Zeile hinzufügen</target>
+					<note>Tooltip.</note>
+				</trans-unit>
+				<trans-unit id="trTipDeleteLineOne" resname="trTipDeleteLineOne">
+					<source>Delete the invoice line</source>
+					<target state="needs-review-translation">Rechnungszeile löschen</target>
+					<note>Tooltip, one selected line.</note>
+				</trans-unit>
+				<trans-unit id="trTipDeleteLineOther" resname="trTipDeleteLineOther">
+					<source>Delete the invoice lines</source>
+					<target state="needs-review-translation">Rechnungszeilen löschen</target>
+					<note>Tooltip, several selected lines.</note>
+				</trans-unit>
+				<trans-unit id="trTipNoTypeFilter" resname="trTipNoTypeFilter">
+					<source>No debit/credit filter</source>
+					<target state="needs-review-translation">Kein Debit-/Kreditfilter</target>
+					<note>Tooltip (was "No Credit Debit Filters ").</note>
+				</trans-unit>
+				<trans-unit id="trTipNoCurrencyFilter" resname="trTipNoCurrencyFilter">
+					<source>No currency filter</source>
+					<target state="needs-review-translation">Kein Währungsfilter</target>
+					<note>Tooltip (was "No currency filters").</note>
+				</trans-unit>
+				<trans-unit id="trTipPrintSelection" resname="trTipPrintSelection">
+					<source>Print the selection</source>
+					<target state="needs-review-translation">Auswahl drucken</target>
+					<note>Tooltip (was "Print Selection").</note>
+				</trans-unit>
+				<trans-unit id="trTipReloadLine" resname="trTipReloadLine">
+					<source>Reload the invoice line</source>
+					<target state="needs-review-translation">Rechnungszeile neu laden</target>
+					<note>Tooltip.</note>
+				</trans-unit>
+				<trans-unit id="trTipCalcDiscount" resname="trTipCalcDiscount">
+					<source>Calculate the discount</source>
+					<target state="needs-review-translation">Rabatt berechnen</target>
+					<note>Tooltip (was "Calc Discount").</note>
+				</trans-unit>
+				<trans-unit id="trTipSearchHelp" resname="trTipSearchHelp">
+					<source>Start/End: 01.01.20...05.05.20  Date: 01.01&amp;05.05</source>
+					<target state="needs-review-translation">Beginn/Ende: 01.01.20...05.05.20  Datum: 01.01&amp;05.05</target>
+					<note>Tooltip of the search help button (190 px wide). The patterns ... and &amp; must stay as they are: the search code parses them.</note>
+				</trans-unit>
+				<trans-unit id="trTipSearchPicker" resname="trTipSearchPicker">
+					<source>Invoice ref. or date</source>
+					<target state="needs-review-translation">Rechnungsnr. oder Datum</target>
+					<note>Help text inside the 4D Widgets search field.</note>
+				</trans-unit>
+				<trans-unit id="trTipProtected" resname="trTipProtected">
+					<source>Protected: click to unprotect</source>
+					<target state="needs-review-translation">Geschützt: klicken, um den Schutz aufzuheben</target>
+					<note>Tooltip of the lock button when the invoice is protected (was the button label "Protect-Unprotect").</note>
+				</trans-unit>
+				<trans-unit id="trTipUnprotected" resname="trTipUnprotected">
+					<source>Not protected: click to protect</source>
+					<target state="needs-review-translation">Nicht geschützt: klicken, um zu schützen</target>
+					<note>Tooltip of the lock button when the invoice is not protected (was the button label "Unprotect-Protect").</note>
+				</trans-unit>
+				<trans-unit id="trMenuLockSelection" resname="trMenuLockSelection">
+					<source>Lock selection</source>
+					<target state="needs-review-translation">Auswahl schützen</target>
+					<note>Context menu of the list.</note>
+				</trans-unit>
+				<trans-unit id="trMenuUnlockSelection" resname="trMenuUnlockSelection">
+					<source>Unlock selection</source>
+					<target state="needs-review-translation">Schutz der Auswahl aufheben</target>
+					<note>Context menu of the list.</note>
+				</trans-unit>
+				<trans-unit id="trMenuDeleteSelection" resname="trMenuDeleteSelection">
+					<source>Delete selection</source>
+					<target state="needs-review-translation">Auswahl löschen</target>
+					<note>Context menu of the list.</note>
+				</trans-unit>
+				<trans-unit id="trRibbonNoFilter" resname="trRibbonNoFilter">
+					<source>No filter</source>
+					<target state="needs-review-translation">Kein Filter</target>
+					<note>Corner ribbon (200 px, 18 pt bold).</note>
+				</trans-unit>
+				<trans-unit id="trRibbonLocked" resname="trRibbonLocked">
+					<source>Locked</source>
+					<target state="needs-review-translation">Geschützt</target>
+					<note>Corner ribbon on a protected invoice (165 px, 20 pt bold).</note>
+				</trans-unit>
+			</group>
+			<group id="print_form" resname="print_form">
+				<trans-unit id="trPrintHeaderDate" resname="trPrintHeaderDate">
+					<source>Date</source>
+					<target state="needs-review-translation">Datum</target>
+					<note>Print header (90 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderInvoice" resname="trPrintHeaderInvoice">
+					<source>Invoice</source>
+					<target state="needs-review-translation">Rechnung</target>
+					<note>Print header (120 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderStart" resname="trPrintHeaderStart">
+					<source>Start</source>
+					<target state="needs-review-translation">Beginn</target>
+					<note>Print header (90 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderEnd" resname="trPrintHeaderEnd">
+					<source>End</source>
+					<target state="needs-review-translation">Ende</target>
+					<note>Print header (90 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderTotal" resname="trPrintHeaderTotal">
+					<source>Total</source>
+					<target state="needs-review-translation">Total</target>
+					<note>Print header (90 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderRate" resname="trPrintHeaderRate">
+					<source>Rate</source>
+					<target state="needs-review-translation">Kurs</target>
+					<note>Print header (70 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderPaid" resname="trPrintHeaderPaid">
+					<source>Paid</source>
+					<target state="needs-review-translation">Bezahlt</target>
+					<note>Print header (90 px). Was "Payed".</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderDays" resname="trPrintHeaderDays">
+					<source>Days</source>
+					<target state="needs-review-translation">Tage</target>
+					<note>Print header in the form; replaced at run time by trPrintHeaderDaysYear.</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderAmount" resname="trPrintHeaderAmount">
+					<source>Amount</source>
+					<target state="needs-review-translation">Betrag</target>
+					<note>Print header in the form; replaced at run time by trPrintHeaderAmountYear.</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderDaysYear" resname="trPrintHeaderDaysYear">
+					<source>Days ({1})</source>
+					<target state="needs-review-translation">Tage ({1})</target>
+					<note>{1} = year. Print header (90 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintHeaderAmountYear" resname="trPrintHeaderAmountYear">
+					<source>Amount ({1})</source>
+					<target state="needs-review-translation">Betrag ({1})</target>
+					<note>{1} = year. Print header (100 px).</note>
+				</trans-unit>
+				<trans-unit id="trPrintFooterTotal" resname="trPrintFooterTotal">
+					<source>Total</source>
+					<target state="needs-review-translation">Total</target>
+					<note>Footer of the date column.</note>
+				</trans-unit>
+				<trans-unit id="trPrintSummary" resname="trPrintSummary">
+					<source>Summary - {1}</source>
+					<target state="needs-review-translation">Übersicht - {1}</target>
+					<note>Print title. {1} = filters (type, currency, year).</note>
+				</trans-unit>
+				<trans-unit id="trPrintPage" resname="trPrintPage">
+					<source>Page {1}</source>
+					<target state="needs-review-translation">Seite {1}</target>
+					<note>{1} = page number.</note>
+				</trans-unit>
+			</group>
+			<group id="messages" resname="messages">
+				<trans-unit id="trBtnYes" resname="trBtnYes">
+					<source>Yes</source>
+					<target state="needs-review-translation">Ja</target>
+					<note>CONFIRM button.</note>
+				</trans-unit>
+				<trans-unit id="trBtnNo" resname="trBtnNo">
+					<source>No</source>
+					<target state="needs-review-translation">Nein</target>
+					<note>CONFIRM button.</note>
+				</trans-unit>
+				<trans-unit id="trBtnAdd" resname="trBtnAdd">
+					<source>Add</source>
+					<target state="needs-review-translation">Hinzufügen</target>
+					<note>CONFIRM button (test data).</note>
+				</trans-unit>
+				<trans-unit id="trBtnCancel" resname="trBtnCancel">
+					<source>Cancel</source>
+					<target state="needs-review-translation">Abbrechen</target>
+					<note>CONFIRM button (test data).</note>
+				</trans-unit>
+				<trans-unit id="trMsgStartAfterEnd" resname="trMsgStartAfterEnd">
+					<source>The start date must be earlier than the end date.</source>
+					<target state="needs-review-translation">Das Beginndatum muss vor dem Enddatum liegen.</target>
+					<note>ALERT (start_value, end_value).</note>
+				</trans-unit>
+				<trans-unit id="trMsgSelectInvoice" resname="trMsgSelectInvoice">
+					<source>Select an invoice.</source>
+					<target state="needs-review-translation">Wählen Sie eine Rechnung aus.</target>
+					<note>ALERT.</note>
+				</trans-unit>
+				<trans-unit id="trMsgProtectedOne" resname="trMsgProtectedOne">
+					<source>This invoice is protected and cannot be deleted.</source>
+					<target state="needs-review-translation">Diese Rechnung ist geschützt und kann nicht gelöscht werden.</target>
+					<note>ALERT (was in French in the code).</note>
+				</trans-unit>
+				<trans-unit id="trMsgProtectedOther" resname="trMsgProtectedOther">
+					<source>These invoices are protected and cannot be deleted.</source>
+					<target state="needs-review-translation">Diese Rechnungen sind geschützt und können nicht gelöscht werden.</target>
+					<note>ALERT (was in French in the code).</note>
+				</trans-unit>
+				<trans-unit id="trConfirmDeleteInvoice" resname="trConfirmDeleteInvoice">
+					<source>Do you want to delete the invoice {1}?</source>
+					<target state="needs-review-translation">Möchten Sie die Rechnung {1} löschen?</target>
+					<note>CONFIRM. {1} = invoice reference.</note>
+				</trans-unit>
+				<trans-unit id="trConfirmDeleteSelection" resname="trConfirmDeleteSelection">
+					<source>Do you want to delete the selection?</source>
+					<target state="needs-review-translation">Möchten Sie die Auswahl löschen?</target>
+					<note>CONFIRM.</note>
+				</trans-unit>
+				<trans-unit id="trMsgProtectedKeptOne" resname="trMsgProtectedKeptOne">
+					<source>{1} protected invoice was kept.</source>
+					<target state="needs-review-translation">{1} geschützte Rechnung wurde beibehalten.</target>
+					<note>ALERT, singular. {1} = count. Was "facture(s) protégée(s) conservée(s)".</note>
+				</trans-unit>
+				<trans-unit id="trMsgProtectedKeptOther" resname="trMsgProtectedKeptOther">
+					<source>{1} protected invoices were kept.</source>
+					<target state="needs-review-translation">{1} geschützte Rechnungen wurden beibehalten.</target>
+					<note>ALERT, plural. {1} = count.</note>
+				</trans-unit>
+				<trans-unit id="trMsgInvoiceDeletedOne" resname="trMsgInvoiceDeletedOne">
+					<source>Invoice deleted.</source>
+					<target state="needs-review-translation">Rechnung gelöscht.</target>
+					<note>ALERT, singular.</note>
+				</trans-unit>
+				<trans-unit id="trMsgInvoiceDeletedOther" resname="trMsgInvoiceDeletedOther">
+					<source>{1} invoices deleted.</source>
+					<target state="needs-review-translation">{1} Rechnungen gelöscht.</target>
+					<note>ALERT, plural. {1} = count (was "Invoices deleted").</note>
+				</trans-unit>
+				<trans-unit id="trMsgNotDeletedOne" resname="trMsgNotDeletedOne">
+					<source>{1} invoice was not deleted.</source>
+					<target state="needs-review-translation">{1} Rechnung wurde nicht gelöscht.</target>
+					<note>ALERT, singular. {1} = count.</note>
+				</trans-unit>
+				<trans-unit id="trMsgNotDeletedOther" resname="trMsgNotDeletedOther">
+					<source>{1} invoices were not deleted.</source>
+					<target state="needs-review-translation">{1} Rechnungen wurden nicht gelöscht.</target>
+					<note>ALERT, plural. {1} = count.</note>
+				</trans-unit>
+				<trans-unit id="trConfirmSaveInvoice" resname="trConfirmSaveInvoice">
+					<source>Do you want to save the invoice {1}?</source>
+					<target state="needs-review-translation">Möchten Sie die Rechnung {1} speichern?</target>
+					<note>CONFIRM. {1} = invoice reference.</note>
+				</trans-unit>
+				<trans-unit id="trMsgSaveFailed" resname="trMsgSaveFailed">
+					<source>Error: the invoice cannot be edited.</source>
+					<target state="needs-review-translation">Fehler: Die Rechnung kann nicht bearbeitet werden.</target>
+					<note>ALERT when save() fails.</note>
+				</trans-unit>
+				<trans-unit id="trMsgUnknownUUID" resname="trMsgUnknownUUID">
+					<source>Unknown UUID.</source>
+					<target state="needs-review-translation">Unbekannte UUID.</target>
+					<note>ALERT (was "Unknow UUID").</note>
+				</trans-unit>
+				<trans-unit id="trConfirmLockInvoices" resname="trConfirmLockInvoices">
+					<source>Do you want to lock {1} invoices? They will be saved automatically.</source>
+					<target state="needs-review-translation">Möchten Sie {1} Rechnungen schützen? Sie werden automatisch gespeichert.</target>
+					<note>CONFIRM, only shown for 2 invoices or more. {1} = count.</note>
+				</trans-unit>
+				<trans-unit id="trConfirmUnlockInvoices" resname="trConfirmUnlockInvoices">
+					<source>Do you want to unlock {1} invoices? They will be saved automatically.</source>
+					<target state="needs-review-translation">Möchten Sie den Schutz von {1} Rechnungen aufheben? Sie werden automatisch gespeichert.</target>
+					<note>CONFIRM, only shown for 2 invoices or more. {1} = count.</note>
+				</trans-unit>
+				<trans-unit id="trMsgLockFailed" resname="trMsgLockFailed">
+					<source>One or more invoices were not saved correctly.</source>
+					<target state="needs-review-translation">Eine oder mehrere Rechnungen wurden nicht korrekt gespeichert.</target>
+					<note>ALERT (was "One or more invoices not edited correctly").</note>
+				</trans-unit>
+				<trans-unit id="trMsgSeedCompiledOnly" resname="trMsgSeedCompiledOnly">
+					<source>Test data can only be created in an interpreted database.</source>
+					<target state="needs-review-translation">Testdaten können nur in einer interpretierten Datenbank erstellt werden.</target>
+					<note>ALERT from the Test data menu in a compiled or built application.</note>
+				</trans-unit>
+				<trans-unit id="trConfirmSeedNotEmpty" resname="trConfirmSeedNotEmpty">
+					<source>The invoice table is not empty. Add the test invoices anyway?</source>
+					<target state="needs-review-translation">Die Rechnungstabelle ist nicht leer. Testrechnungen trotzdem hinzufügen?</target>
+					<note>CONFIRM from the Test data menu.</note>
+				</trans-unit>
+				<trans-unit id="trMsgSeedCreatedOne" resname="trMsgSeedCreatedOne">
+					<source>{1} test invoice created.</source>
+					<target state="needs-review-translation">{1} Testrechnung erstellt.</target>
+					<note>ALERT, singular. {1} = count.</note>
+				</trans-unit>
+				<trans-unit id="trMsgSeedCreatedOther" resname="trMsgSeedCreatedOther">
+					<source>{1} test invoices created.</source>
+					<target state="needs-review-translation">{1} Testrechnungen erstellt.</target>
+					<note>ALERT, plural. {1} = count (0 uses this form too).</note>
+				</trans-unit>
+				<trans-unit id="trConfirmReopenWindows" resname="trConfirmReopenWindows">
+					<source>The Transitoires window must be reopened to show the new language. Changes that have not been saved will be lost.</source>
+					<target state="needs-review-translation">Das Fenster Transitorische Posten muss neu geöffnet werden, um die neue Sprache anzuzeigen. Nicht gespeicherte Änderungen gehen verloren.</target>
+					<note>CONFIRM after a language change (Input_reopenAll). Later: the window is translated the next time it opens.</note>
+				</trans-unit>
+				<trans-unit id="trBtnReopenNow" resname="trBtnReopenNow">
+					<source>Reopen now</source>
+					<target state="needs-review-translation">Jetzt neu öffnen</target>
+					<note>CONFIRM button.</note>
+				</trans-unit>
+				<trans-unit id="trBtnLater" resname="trBtnLater">
+					<source>Later</source>
+					<target state="needs-review-translation">Später</target>
+					<note>CONFIRM button.</note>
+				</trans-unit>
+				<trans-unit id="trMsgLanguageNotSaved" resname="trMsgLanguageNotSaved">
+					<source>The language choice could not be saved. It applies until 4D is closed.</source>
+					<target state="needs-review-translation">Die Sprachwahl konnte nicht gespeichert werden. Sie gilt bis zum Beenden von 4D.</target>
+					<note>ALERT when the preference file cannot be written (Language_saveChoice).</note>
+				</trans-unit>
+			</group>
+			<group id="values" resname="values">
+				<trans-unit id="trValueDebit" resname="trValueDebit">
+					<source>Debit</source>
+					<target state="needs-review-translation">Debit</target>
+					<note>Display of the stored value "debit" (breadcrumb, ribbon, print title).</note>
+				</trans-unit>
+				<trans-unit id="trValueCredit" resname="trValueCredit">
+					<source>Credit</source>
+					<target state="needs-review-translation">Kredit</target>
+					<note>Display of the stored value "credit".</note>
+				</trans-unit>
+				<trans-unit id="trValueCurrencyCHF" resname="trValueCurrencyCHF" translate="no">
+					<source>CHF</source>
+					<target>CHF</target>
+					<note>Display of the stored currency value "Frs". Not translated.</note>
+				</trans-unit>
+			</group>
+		</body>
+	</file>
+</xliff>

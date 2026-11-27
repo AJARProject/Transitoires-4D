@@ -25,7 +25,7 @@ If (OK=1)
 		  // https://developer.4d.com/docs/21-R4/commands/print-object
 		$printed:=Print object(*; "print_label")
 		$listPrinted:=Print object(*; "Invoice_lb")
-		<>page:="Page "+String($count)
+		<>page:=L10n("trPrintPage"; String($count))
 		$printed:=Print object(*; "print_page")
 		$printed:=Print object(*; "print_date")
 		LISTBOX GET PRINT INFORMATION(*; "Invoice_lb"; lk printing is over; $over)

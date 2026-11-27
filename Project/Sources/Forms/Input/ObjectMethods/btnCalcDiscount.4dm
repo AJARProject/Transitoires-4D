@@ -14,7 +14,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnCalcDiscount"))
-			Form.tipCalcDiscount.TextLabel("Calc Discount")
+			Form.tipCalcDiscount.TextLabel(L10n("trTipCalcDiscount"))
 			Form.tipCalcDiscount.Show()
 		End if 
 		

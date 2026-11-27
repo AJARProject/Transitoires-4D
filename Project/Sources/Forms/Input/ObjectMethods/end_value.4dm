@@ -15,7 +15,7 @@ Case of
 		If (Form.currentInvoice.start>Form.currentInvoice.end)
 			Form.currentInvoice.end:=Form.currentInvoice.oldEnd
 			BEEP
-			ALERT("Start date must be lower than end date")
+			ALERT(L10n("trMsgStartAfterEnd"))
 		Else 
 			Form.btnSave.Enable(True)
 			Form.currentInvoice.oldEnd:=Form.currentInvoice.end

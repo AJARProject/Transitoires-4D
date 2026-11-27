@@ -32,16 +32,16 @@ Case of
 		Case of 
 			: (Form.currencyFilter#"") && (Form.typeFilter#"")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND currency= :3 AND type= :4 AND start >= :5 AND end <= :6"; $startInvoiceYear; $endInvoiceYear; Form.currencyFilter; Form.typeFilter; $dateStart; $dateEnd)
-				Form.ribbon.Message(Form.typeFilter+" "+Form.currencyFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			: (Form.currencyFilter="") && (Form.typeFilter#"")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND type= :3 AND start >= :4 AND end <= :5"; $startInvoiceYear; $endInvoiceYear; Form.typeFilter; $dateStart; $dateEnd)
-				Form.ribbon.Message(Form.typeFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			: (Form.currencyFilter#"") && (Form.typeFilter="")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND currency= :3 AND start >= :4 AND end <= :5"; $startInvoiceYear; $endInvoiceYear; Form.currencyFilter; $dateStart; $dateEnd)
-				Form.ribbon.Message(Form.currencyFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			Else 
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND start >= :3 AND end <= :4"; $startInvoiceYear; $endInvoiceYear; $dateStart; $dateEnd)
-				Form.ribbon.Message(String(Form.year))
+				Form.ribbon.Message(filterSummary)
 		End case 
 		
 	: (vSearch="@&@")
@@ -59,16 +59,16 @@ Case of
 		Case of 
 			: (Form.currencyFilter#"") && (Form.typeFilter#"")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND currency= :3 AND type= :4 "; $startInvoiceYear; $endInvoiceYear; Form.currencyFilter; Form.typeFilter)
-				Form.ribbon.Message(Form.typeFilter+" "+Form.currencyFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			: (Form.currencyFilter="") && (Form.typeFilter#"")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND type= :3 "; $startInvoiceYear; $endInvoiceYear; Form.typeFilter)
-				Form.ribbon.Message(Form.typeFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			: (Form.currencyFilter#"") && (Form.typeFilter="")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND currency= :3 "; $startInvoiceYear; $endInvoiceYear; Form.currencyFilter)
-				Form.ribbon.Message(Form.currencyFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			Else 
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 "; $startInvoiceYear; $endInvoiceYear)
-				Form.ribbon.Message(String(Form.year))
+				Form.ribbon.Message(filterSummary)
 		End case 
 		
 	Else 
@@ -80,16 +80,16 @@ Case of
 		Case of 
 			: (Form.currencyFilter#"") && (Form.typeFilter#"")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND currency= :3 AND type= :4 AND (invoice_ref = :5 OR start = :6 OR end = :6)"; $startInvoiceYear; $endInvoiceYear; Form.currencyFilter; Form.typeFilter; $searchInvoice; $searchDate)
-				Form.ribbon.Message(Form.typeFilter+" "+Form.currencyFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			: (Form.currencyFilter="") && (Form.typeFilter#"")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND type= :3 AND (invoice_ref = :4 OR start = :5 OR end = :5)"; $startInvoiceYear; $endInvoiceYear; Form.typeFilter; $searchInvoice; $searchDate)
-				Form.ribbon.Message(Form.typeFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			: (Form.currencyFilter#"") && (Form.typeFilter="")
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND currency= :3 AND (invoice_ref = :4 OR start = :5 OR end = :5)"; $startInvoiceYear; $endInvoiceYear; Form.currencyFilter; $searchInvoice; $searchDate)
-				Form.ribbon.Message(Form.currencyFilter+" "+String(Form.year))
+				Form.ribbon.Message(filterSummary)
 			Else 
 				Form.allInvoices:=$invoices.query("invoice_date >= :1 AND invoice_date<= :2 AND (invoice_ref = :3 OR start = :4 OR end = :4 )"; $startInvoiceYear; $endInvoiceYear; $searchInvoice; $searchDate)
-				Form.ribbon.Message(String(Form.year))
+				Form.ribbon.Message(filterSummary)
 		End case 
 End case 
 

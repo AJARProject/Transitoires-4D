@@ -14,7 +14,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnNoFilterCurrency"))
-			Form.tipNoFilterCurrency.TextLabel("No currency filters")
+			Form.tipNoFilterCurrency.TextLabel(L10n("trTipNoCurrencyFilter"))
 			Form.tipNoFilterCurrency.Show()
 		End if 
 		

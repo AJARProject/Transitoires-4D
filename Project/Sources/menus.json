@@ -1,4 +1,4 @@
-﻿{
+{
 	"bars": [
 		{
 			"id": 1,
@@ -22,11 +22,11 @@
 			"title": ":xliff:CommonMenuFile",
 			"items": [
 				{
-					"title": "Transitoire",
+					"title": ":xliff:trMenuTransitoires",
 					"method": "Input_call"
 				},
 				{
-					"title": "Données de test",
+					"title": ":xliff:trMenuTestData",
 					"method": "DEV_seedFakeData"
 				},
 				{

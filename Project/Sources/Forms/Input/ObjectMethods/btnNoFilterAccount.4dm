@@ -14,7 +14,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnNoFilterAccount"))
-			Form.tipNoFilterAccount.TextLabel("No Credit Debit Filters ")
+			Form.tipNoFilterAccount.TextLabel(L10n("trTipNoTypeFilter"))
 			Form.tipNoFilterAccount.Show()
 		End if 
 		

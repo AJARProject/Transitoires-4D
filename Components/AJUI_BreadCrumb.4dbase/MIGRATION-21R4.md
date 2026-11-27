@@ -1,7 +1,5 @@
 # Migration 4D 21 R4 — AJUI_BreadCrumb
 
-Réalisé avec Cursor / Grok Bot (Codesky) pour Maurice Inzirillo.
-
 ## Français
 
 ### Version d'origine
@@ -14,7 +12,7 @@ Réalisé avec Cursor / Grok Bot (Codesky) pour Maurice Inzirillo.
 
 ### API publique conservée
 
-Transitoires (`AJARProject/Transitoires`, formulaire `Input`, objets `bc1` à `bc4`) utilise l'API par formules, pas le constructeur de classe :
+Transitoires ([`AJARProject/Transitoires-4D`](https://github.com/AJARProject/Transitoires-4D), formulaire `Input`, objets `bc1` à `bc4`) utilise l'API par formules, pas le constructeur de classe :
 
 - `New AJUI_BreadCrumb($bc)` avec `templateName` et `templatePath`
 - `.Name("bc1")`, `.RemoveCurrent()`, `.SetCurrentSection(...)`, `.UpdateSection(id; objet)`
@@ -58,7 +56,7 @@ Commandes vérifiées sur la doc 21 / 21 R4 (elles restent, elles ne sont pas pr
 
 Ne pas poser le tag tant que la compilation 4D 21 R4 n'est pas faite sur un Mac. Aucun tag n'existe aujourd'hui.
 
-1. Merger `migration/21R4` dans `master` (décision du propriétaire ; cet agent ne merge pas).
+1. Merger `migration/21R4` dans `master` du dépôt `AJUI_Breadcrumb_source` (décision du propriétaire).
 2. Ouvrir `Project/AJUI_BreadCrumb.4DProject` avec 4D 21 R4. Si le menu de compatibilité du compilateur est encore proposé, choisir **Toutes les variables sont typées (typage direct)**. Le fichier de réglages porte déjà `compilation_path="3"`, comme 4D SVG 21.4.
 3. Contrôle de syntaxe, puis compilation. Le réglage `fat_binary` demande un binaire Intel et Apple Silicon.
 4. Générer le composant : Développement > Générer l'application, ou `AJUI_BC_buildComponent` (appelle `BUILD APPLICATION` sur `Settings/buildApp.4DSettings`). Pas de chemin de licence dans ce fichier : la signature, s'il y en a une, vient du Mac de build, comme pour AJUI_Button 2.2.1.
@@ -85,8 +83,6 @@ Les releases sœurs (AJUI_Button 2.2.1, AJUI_Banner 1.9.0, AJUI_Tip 1.8.1, AJ_Ma
 
 ## English
 
-Made with Cursor / Grok Bot (Codesky) for Maurice Inzirillo.
-
 ### Original version
 
 - Repository: `AJARProject/AJUI_Breadcrumb_source`, default branch `master`.
@@ -97,7 +93,7 @@ Made with Cursor / Grok Bot (Codesky) for Maurice Inzirillo.
 
 ### Public API kept
 
-Transitoires (`AJARProject/Transitoires`, `Input` form, objects `bc1`–`bc4`) uses the formula API, not the class constructor:
+Transitoires ([`AJARProject/Transitoires-4D`](https://github.com/AJARProject/Transitoires-4D), `Input` form, objects `bc1`–`bc4`) uses the formula API, not the class constructor:
 
 - `New AJUI_BreadCrumb($bc)` with `templateName` and `templatePath`
 - `.Name("bc1")`, `.RemoveCurrent()`, `.SetCurrentSection(...)`, `.UpdateSection(id; object)`
@@ -141,7 +137,7 @@ Commands checked on the v21 / 21 R4 docs (kept; they are not `_o_` commands): `T
 
 Do not create the tag until a 4D 21 R4 compile has been done on a Mac. No tag exists today.
 
-1. Merge `migration/21R4` into `master` (the owner's decision; this agent does not merge).
+1. Merge `migration/21R4` into `master` of the `AJUI_Breadcrumb_source` repository (the owner's decision).
 2. Open `Project/AJUI_BreadCrumb.4DProject` with 4D 21 R4. If the compiler compatibility menu is still offered, choose **All variables are typed (Direct typing)**. The settings file already stores `compilation_path="3"`, as in 4D SVG 21.4.
 3. Syntax check, then compile. `fat_binary` requests an Intel and Apple Silicon binary.
 4. Build the component: Design > Build Application, or `AJUI_BC_buildComponent` (calls `BUILD APPLICATION` on `Settings/buildApp.4DSettings`). This file has no licence path: signing, if any, comes from the build Mac, as with AJUI_Button 2.2.1.

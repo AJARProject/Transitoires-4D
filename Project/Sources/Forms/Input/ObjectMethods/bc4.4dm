@@ -18,14 +18,17 @@ Case of
 		$section_obj.onClickCB:="setCurrency"
 		$params:={}
 		$params.currency:="Frs"
+		$section_obj.label:=L10n_value("Frs")  // shows CHF, the stored value and the id stay "Frs"
 		$section_obj.onClickCBParams:=OB Copy($params)
 		Form.bc4.UpdateSection("Frs"; $section_obj)
 		
 		$params.currency:="€"
+		$section_obj.label:="€"
 		$section_obj.onClickCBParams:=OB Copy($params)
 		Form.bc4.UpdateSection("€"; $section_obj)
 		
 		$params.currency:="$"
+		$section_obj.label:="$"
 		$section_obj.onClickCBParams:=OB Copy($params)
 		Form.bc4.UpdateSection("$"; $section_obj)
 End case 

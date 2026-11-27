@@ -18,13 +18,13 @@ var $status : Object
 
 If ((Is compiled mode) || (Application type=4D Volume desktop))
 	If (Not($silent))
-		ALERT("DEV_seedFakeData does not run in a compiled or built application.")
+		ALERT(L10n("trMsgSeedCompiledOnly"))
 	End if 
 	return 0
 End if 
 
 If ((ds.invoice.all().length>0) && (Not($silent)))
-	CONFIRM("The invoice table is not empty. Add the fake invoices anyway?"; "Add"; "Cancel")
+	CONFIRM(L10n("trConfirmSeedNotEmpty"); L10n("trBtnAdd"); L10n("trBtnCancel"))
 	If (OK=0)
 		return 0
 	End if 
@@ -86,7 +86,7 @@ For each ($spec; $specs)
 End for each 
 
 If (Not($silent))
-	ALERT(String($created)+" fake invoice(s) created.")
+	ALERT(L10n_count("trMsgSeedCreated"; $created))
 End if 
 
 return $created
