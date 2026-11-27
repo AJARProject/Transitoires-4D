@@ -1,7 +1,5 @@
 # Notes de version / Release notes
 
-> Les numéros de PR et les commits cités ci-dessous renvoient au dépôt de développement d'AJAR, qui n'est pas public. / PR numbers and commits quoted below refer to AJAR's development repository, which is not public.
-
 ## Outils de développement : 4DPop et 4DPop XLIFF Pro (4D 21 R4)
 
 - **Statut** : inclus dans cette version.
@@ -19,7 +17,7 @@
 - **Inchangé** : les fichiers `.xlf`. XLIFF Pro les réécrit dans son propre format, mais le contenu reste identique, et ces réécritures ne sont pas reprises.
 
 ### Testé
-- **Maurice**, le 27.11.2026, sur une copie du projet, 4D 21 R4, système fr-CH :
+- **À l'écran**, le 27.11.2026, sur une copie du projet, 4D 21 R4, système fr-CH :
   - langue de référence English choisie avec Maj ;
   - l'assistant ne revient plus.
 - **Test headless R-B38** (fixes/21R4 de XLIFF Pro), système fr-ch :
@@ -31,13 +29,11 @@
 
 ## Transitoires : interface multilingue (fr, de, it, en)
 
-- **Fusionné dans master** le 27.11.2026 : commit `db7b661`, squash de la PR #7 (`feature/i18n-xliff`).
-- **Base précédente** : `001dd50`, la migration 4D 21 R4 iso-fonctionnelle de la PR #5.
+- **Version** : 27.11.2026.
+- **Base précédente** : la première version publique, migration 4D 21 R4 iso-fonctionnelle du 25.11.2026.
 - **Environnement** : 4D 21 R4, mode projet.
-- **Fichiers touchés** : 68 fichiers changés par rapport à `001dd50`, dont 31 nouveaux et 37 modifiés.
-- **Contenu testé** : l'arbre de `db7b661` est identique à celui de `882aa97`, la dernière tête de branche revalidée par Testsky (reval 4).
-
-Le dépôt n'a encore ni tag ni release GitHub.
+- **Fichiers touchés** : 68 fichiers changés par rapport à la version du 25.11.2026, dont 31 nouveaux et 37 modifiés.
+- **Contenu testé** : le contenu publié est celui qui a passé les tests décrits plus bas.
 
 [English summary](#english-summary) at the end.
 
@@ -133,7 +129,7 @@ Une partie séparée pour les négatifs évite `<<<`, car le signe moins prend l
 ### print_form et Input recalés
 Largeurs finales dans `print_form`, la listbox `Invoice_lb` commençant à `left` 3 :
 
-| Colonne | Contenu | Avant (master `001dd50`) | Après |
+| Colonne | Contenu | Avant (version du 25.11.2026) | Après |
 |---|---|---|---|
 | Colonne1 | Date | 90 | **72** |
 | Column1 | Facture | 120 | 120 |
@@ -167,54 +163,30 @@ Largeurs finales dans `print_form`, la listbox `Invoice_lb` commençant à `left
 
 ## Tests
 
-### Validations de Maurice à l'écran
+### Validations à l'écran
 - **Premier essai** sur une copie de test datée, le 27.11.2026 : interface en FR, IT et DE OK. Mais 4D démarrait toujours en français, ce qui a conduit à créer le menu Langue.
-- **Après l'ajout du menu Langue**, Maurice a validé à l'écran :
+- **Après l'ajout du menu Langue**, validés à l'écran :
   - la compilation ;
   - le mode Automatique ;
   - le passage à DE et IT, avec réouverture de la fenêtre ;
   - la langue gardée après relance ;
   - le menu Édition.
 
-### Revalidations de Testsky
-Toutes les revalidations ont eu lieu le 27.11.2026, heure de Zurich.
-- **Machine** : Mac mini, 4D 21 R4 build 100185, headless, interprété.
-- **Isolement** : faux HOME à chaque lancement, et impression en PDF seulement.
-
-| Run | Commit testé | Résultat |
-|---|---|---|
-| Reval 1 (15:28–15:50) | `7682600` | 6 points OK sur 7. Un KO mineur : `{"language":{"x":1}}` provoquait l'erreur 54 au démarrage. |
-| Reval 2 (15:54–16:12) | `2a36dd7` | Erreur 54 corrigée. Formats sans `<<<`. `launch_unitTest` : 51/53, car 2 assertions du test dépassaient la limite des 13 chiffres. |
-| Reval 3 (16:15–16:30) | `d5fcb40` | `launch_unitTest` 53/53. KO : le tableau imprimé dépassait la page (bord droit 1043 px pour 1022). KO : -99'999'999'999.99 coupé en pied. Totaux Input à la limite. |
-| Reval 4 (16:37–16:50) | `882aa97` | **Tout OK**, avec des réserves listées plus bas. |
-
-**Reval 1** :
-- Compilation : 0 erreur, 0 warning, 9 composants chargés.
-- Clés : 106/106 × 4 langues, 0 vide, 0 `:xliff:` brut. 20 libellés de menu corrects pour fr, de, it, en, auto et un code inconnu.
-- `L10n` : 15 clés à `{1}` testées, plus le repli et les pluriels.
-- Données : 30 factures de test, avec une empreinte SHA-256 identique après 5 changements de langue et après relance.
-- Préférences : les cas malformés testés (fichier absent, vide, JSON tronqué, non-JSON, tableau, `null`, code inconnu, dossier à la place du fichier, fichier illisible…) retombent sur Automatique, sauf `{"language":{"x":1}}` (erreur 54, corrigée ensuite).
-- `launch_unitTest` : 18 assertions, 0 échec.
-
-**Reval 2** :
-- Préférences : 0 exception sur 26 textes plus 12 cas supplémentaires, et sur 28 fichiers réels.
-- Vrai démarrage headless : 27 cas, 0 boîte d'erreur.
-- Formats, identiques dans les 4 langues : `1'234'567.89`, `-1'234'567.89`, `999'999.99`, `-100'000.00`, `0.00`. Avec `|Schweiz2` : `1'234'567.8910`.
-
-**Reval 4** :
-- **Page** : bord droit du tableau à 1017 px pour une zone imprimable de 1022 px. Dans les 4 PDF, le texte le plus à droite finit à 824.3 pt, sous la limite imprimable de 826.9 pt. La dernière colonne est entière.
+### Tests automatisés
+Le 27.11.2026, en 4D 21 R4, mode headless interprété, impression en PDF seulement :
+- **Compilation** : 0 erreur, 0 avertissement.
+- **Tests unitaires** : `launch_unitTest` 53/53, soit 9 + 9 + 35 assertions.
+- **Clés** : 106/106 × 4 langues, aucune vide, aucun `:xliff:` brut. Les 20 libellés de menu sont corrects en fr, de, it, en, en mode Automatique et pour un code de langue inconnu.
+- **Préférences** : les cas malformés (fichier absent, vide, JSON tronqué, non-JSON, tableau, `null`, code inconnu, objet à la place du texte, dossier à la place du fichier, fichier illisible…) retombent sur Automatique, sans boîte d'erreur au démarrage.
+- **Données** : 30 factures de test, avec une empreinte SHA-256 identique après plusieurs changements de langue et après relance.
+- **Formats**, identiques dans les 4 langues : `1'234'567.89`, `-1'234'567.89`, `999'999.99`, `-100'000.00`, `0.00`. Avec `|Schweiz2` : `1'234'567.8910`.
+- **Page** : bord droit du tableau à 1017 px pour une zone imprimable de 1022 px. Dans les 4 PDF, le texte le plus à droite finit à 824.3 pt, sous la limite imprimable de 826.9 pt.
 - **Pieds Montant facturé et Montant payé** (130 px, gras) : -9'999'999'999.99 est entier dans les 4 PDF.
-- **Totaux Input** : le texte « -99'999'999'999.99 » mesure 138 px pour 150 px, mesuré par 4D (`OBJECT GET BEST SIZE`).
-- **Colonnes réduites**, mesurées dans les 4 langues :
-  - en-têtes Jours : 63 à 69 px pour 78 px ;
-  - en-têtes de date : ≤ 38 px pour 72 px ;
-  - en-têtes Taux : ≤ 41 px pour 62 px ;
-  - dates complètes dans 72 px.
-- **Compilation et tests** : 0 erreur, 0 warning. `launch_unitTest` : 53/53, soit 9 + 9 + 35 assertions.
-- **Non-régression** : 106/106 clés × 4 langues. Vrai démarrage headless avec des préférences malformées : 0 boîte d'erreur. Données : empreinte SHA identique.
+- **Totaux Input** : « -99'999'999'999.99 » mesure 138 px pour 150 px (`OBJECT GET BEST SIZE`).
+- **Colonnes réduites**, mesurées dans les 4 langues : en-têtes Jours 63 à 69 px pour 78 px ; en-têtes de date ≤ 38 px pour 72 px ; en-têtes Taux ≤ 41 px pour 62 px ; dates complètes dans 72 px.
 
-### Encore à vérifier à la main (d'après Testsky)
-- **Vraie impression sur l'imprimante Brother** :
+### Encore à vérifier à la main
+- **Vraie impression sur une imprimante** :
   - bord droit du tableau ;
   - pied de page « Pagina » ou « Seite » avec un numéro à 3 chiffres ;
   - libellé de filtres long ;
@@ -251,7 +223,7 @@ Toutes les revalidations ont eu lieu le 27.11.2026, heure de Zurich.
 
 ## Défauts existant avant cette version, non corrigés
 
-- **`print_page` dépasse la zone imprimable.** L'objet va jusqu'à 1044 px pour une zone de 1022. « Page 123 » est encore entier dans le PDF, mais un texte plus long comme « Pagina 123 » dépasserait la marge imprimable, et une imprimante pourrait le rogner. Testsky propose de ramener le bord droit à ≤ 1022 px, par exemple avec `left` 934. Décision en attente.
+- **`print_page` dépasse la zone imprimable.** L'objet va jusqu'à 1044 px pour une zone de 1022. « Page 123 » est encore entier dans le PDF, mais un texte plus long comme « Pagina 123 » dépasserait la marge imprimable, et une imprimante pourrait le rogner. Correction possible : ramener le bord droit à ≤ 1022 px, par exemple avec `left` 934. Pas encore décidé.
 - **Résumé des filtres long coupé.** `print_label` va jusqu'à 1023 px, et un libellé de filtres long (95 caractères dans le test) est coupé net au bord droit.
 - **Column10 sans type nombre.** La colonne a le format `|Schweiz` mais pas `dataSourceTypeHint: "number"`, contrairement à Column9, dans Input comme dans print_form. Le format est à vérifier à l'écran et à l'impression.
 
@@ -292,7 +264,7 @@ Toutes les revalidations ont eu lieu le 27.11.2026, heure de Zurich.
 
 ## English summary
 
-Transitoires now runs in **French, German, Italian and English**. Merged into master as `db7b661` on 27.11.2026 (squash of PR #7). Its tree is identical to `882aa97`, the last branch head Testsky revalidated.
+Transitoires now runs in **French, German, Italian and English** (version of 27.11.2026).
 
 - **For users**:
   - a **Language** menu (Automatic = system language, Français, Deutsch, Italiano, English), with the choice saved per user and applied at startup;
@@ -309,8 +281,8 @@ Transitoires now runs in **French, German, Italian and English**. Merged into ma
   - print_form and Input widths reworked: the printed table ends at 1017 px for a 1022 px printable width, amount footers are 130 px and Input totals 150 px;
   - `check_xliff.py`, `I18N.md` and a review table.
 - **Tests**:
-  - Maurice validated the result on screen;
-  - Testsky ran 4 revalidations; the last one (`882aa97`) is all OK: 0 compile errors or warnings, `launch_unitTest` 53/53, 106/106 keys in 4 languages, and the table fits on the page.
+  - validated on screen;
+  - automated headless run: 0 compile errors or warnings, `launch_unitTest` 53/53, 106/106 keys in 4 languages, and the table fits on the page.
 - **Known limits**:
   - exact up to 99'999'999'999.99 (13 significant digits);
   - printed amount footers guaranteed up to -9'999'999'999.99, Column9/10 footers up to about -9'999'999.99;

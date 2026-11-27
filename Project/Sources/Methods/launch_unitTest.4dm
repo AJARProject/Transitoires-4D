@@ -1,6 +1,6 @@
 //%attributes = {}
   // launch_unitTest ()
-  // Run the days_* assertions and the PR #7 ones (preferences.json, number formats).
+  // Run the days_* assertions and the multilingual ones (preferences.json, number formats).
 
 #DECLARE()
 

@@ -6,7 +6,7 @@
   // empty or unreadable JSON, null, an array, a string, a missing "language"
   // property, a "language" that is not text (number, object, null...) or an
   // unknown code. The type is checked before any use of the value: String() on
-  // an object raised error 54 at startup (Testsky, PR #7).
+  // an object raised error 54 at startup (found in testing).
   // https://developer.4d.com/docs/21-R4/Concepts/error-handling#tryexpression
   // https://developer.4d.com/docs/21-R4/commands/value-type
 

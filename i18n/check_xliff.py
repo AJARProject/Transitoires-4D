@@ -23,7 +23,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 LANGS = ["en", "fr", "de", "it"]
 NS = "urn:oasis:names:tc:xliff:document:1.2"
 DEV_ONLY = {"UT_assert.4dm", "launch_unitTest.4dm", "AJUI_FloatingLabel_main.4dm", "_days_currentyear.4dm",
-            "_days_nextyear.4dm", "_i18n_unitTests.4dm", "UT_assertText.4dm", "zz_test.4dm", "zz_CleanAndGenerateData.4dm", "_codesky_compile.4dm"}
+            "_days_nextyear.4dm", "_i18n_unitTests.4dm", "UT_assertText.4dm", "zz_test.4dm", "zz_CleanAndGenerateData.4dm"}
 errors, warnings = [], []
 
 def err(m): errors.append(m)

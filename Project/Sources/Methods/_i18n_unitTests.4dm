@@ -1,8 +1,8 @@
 //%attributes = {}
   // _i18n_unitTests ()
-  // Assertions for PR #7 (called by launch_unitTest):
+  // Assertions for the multilingual interface (called by launch_unitTest):
   // 1. Language_choiceFromText: any malformed preferences.json gives "auto"
-  //    without an error (error 54 seen by Testsky with {"language":{"x":1}}).
+  //    without an error (error 54 seen in testing with {"language":{"x":1}}).
   // 2. Number formats |Schweiz and |Schweiz2 (filters.json): no <<< up to
   //    99'999'999'999.99 (4D converts reals on 13 significant digits, so
   //    larger values lose their last decimals), negatives with their own part. The apostrophe is a
