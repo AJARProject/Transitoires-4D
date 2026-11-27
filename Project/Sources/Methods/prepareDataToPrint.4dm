@@ -23,12 +23,12 @@ End for each
 <>amount_this_year:=<>allInvoices_selection.sum("amount_currentYear")
 <>amount_next_year:=<>allInvoices_selection.sum("amount_nextYear")
 
-<>print_label:=" Summary - "+Form.typeFilter+" "+Form.currencyFilter+" "+String(Form.year)
+<>print_label:=" "+L10n("trPrintSummary"; filterSummary)
 
 <>isFrs:=(Form.currencyFilter="Frs") 
 
-<>days_currentYear_title:="Days ("+String(Form.year)+")"
-<>days_nextYear_title:="Days ("+String(Form.year+1)+")"
-<>amount_currentYear_title:="Amount ("+String(Form.year)+")"
-<>amount_nextYear_title:="Amount ("+String(Form.year+1)+")"
-<>total:="Total"
+<>days_currentYear_title:=L10n("trPrintHeaderDaysYear"; String(Form.year))
+<>days_nextYear_title:=L10n("trPrintHeaderDaysYear"; String(Form.year+1))
+<>amount_currentYear_title:=L10n("trPrintHeaderAmountYear"; String(Form.year))
+<>amount_nextYear_title:=L10n("trPrintHeaderAmountYear"; String(Form.year+1))
+<>total:=L10n("trPrintFooterTotal")

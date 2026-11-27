@@ -17,3 +17,7 @@ var <>amount_currentYear_title; <>amount_nextYear_title : Text
 var gError : Integer
 var UT_failureCount : Integer
 var FLabel_templateMissing : Boolean
+var <>language_choice : Text
+var <>menu_bar; <>menu_language : Text
+var <>menu_texts; <>input_windows : Collection
+var vInput_reopen : Boolean

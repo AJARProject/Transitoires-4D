@@ -14,7 +14,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnAdd"))
-			Form.tipAdd.TextLabel("Add a new line")
+			Form.tipAdd.TextLabel(L10n("trTipAddLine"))
 			Form.tipAdd.Show()
 		End if 
 		

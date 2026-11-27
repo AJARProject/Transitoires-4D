@@ -23,6 +23,16 @@
 		"4D SVG": {
 			"github": "4d/4D-SVG",
 			"version": "4d"
+		},
+		"4DPop": {},
+		"4DPop XLIFF Pro": {},
+		"UI with Classes": {
+			"github": "vdelachaux/UI-with-Classes",
+			"version": "4d"
+		},
+		"SVG with Classes": {
+			"github": "vdelachaux/SVG-with-Classes",
+			"version": "4d"
 		}
 	}
 }

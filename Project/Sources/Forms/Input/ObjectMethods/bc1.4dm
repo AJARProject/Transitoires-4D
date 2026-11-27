@@ -18,10 +18,12 @@ Case of
 		$section_obj.onClickCB:="setType"
 		$params:={}
 		$params.type:="debit"
+		$section_obj.label:=L10n_value("debit")  // display only, the id stays "debit"
 		$section_obj.onClickCBParams:=OB Copy($params)
 		Form.bc1.UpdateSection("debit"; $section_obj)
 		
 		$params.type:="credit"
+		$section_obj.label:=L10n_value("credit")
 		$section_obj.onClickCBParams:=OB Copy($params)
 		Form.bc1.UpdateSection("credit"; $section_obj)
 End case 

@@ -14,7 +14,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnReload"))
-			Form.tipReload.TextLabel("Reload the invoice line")
+			Form.tipReload.TextLabel(L10n("trTipReloadLine"))
 			Form.tipReload.Show()
 		End if 
 		

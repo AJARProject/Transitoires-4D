@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"4DPop": "./LocalComponents/4DPop.4dbase",
+		"4DPop XLIFF Pro": "./LocalComponents/4DPop XLIFF Pro.4dbase"
+	}
+}

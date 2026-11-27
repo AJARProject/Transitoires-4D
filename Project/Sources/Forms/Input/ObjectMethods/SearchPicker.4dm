@@ -5,7 +5,7 @@ var $objectName : Text
 Case of 
 	: (Form event code=On Load)
 		$objectName:=OBJECT Get name(Object current)
-		SearchPicker SET HELP TEXT($objectName; "Invoice ref or date")
+		SearchPicker SET HELP TEXT($objectName; L10n("trTipSearchPicker"))
 		
 	: (Form event code=On Data Change)
 		// 4D Widgets (GitHub) re-pushes vSearch on window (re)activation, e.g. after CONFIRM.

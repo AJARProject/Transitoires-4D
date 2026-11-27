@@ -5,7 +5,7 @@
 #DECLARE()
 
 If (Form.btnProtect.protect)
-	Form.btnProtect.Label(AJUI_btn_default; "Protect-Unprotect")
+	Form.btnProtect.Label(AJUI_btn_default; L10n("trTipProtected"))  // shown as the tooltip of btnProtect
 	Form.btnProtectBanner.DrawBanner()
 	OBJECT SET VISIBLE(*; "RectProtect"; True)
 	Form.btnProtect.PicturePath(AJUI_btn_default; "invoice_lock/3994379---lock-padlock-privacy-protection-security.svg")
@@ -18,7 +18,7 @@ If (Form.btnProtect.protect)
 	OBJECT SET ENTERABLE(*; "invoice_date_value"; False)
 	OBJECT SET ENTERABLE(*; "Form.discount"; False)
 Else 
-	Form.btnProtect.Label(AJUI_btn_default; "Unprotect-Protect")
+	Form.btnProtect.Label(AJUI_btn_default; L10n("trTipUnprotected"))
 	Form.btnProtectBanner.HideBanner()
 	OBJECT SET VISIBLE(*; "RectProtect"; False)
 	Form.btnProtect.PicturePath(AJUI_btn_default; "invoice_lock/3994412---key-lock-open-password-unlock.svg")

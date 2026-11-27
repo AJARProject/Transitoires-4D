@@ -14,7 +14,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnSave"))
-			Form.tipSave.TextLabel("Save")
+			Form.tipSave.TextLabel(L10n("trTipSave"))
 			Form.tipSave.Show()
 		End if 
 		

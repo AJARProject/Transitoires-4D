@@ -5,7 +5,6 @@
 
 #DECLARE($lock : Boolean)
 
-var $lockStatus : Text
 var $invoice : 4D.Entity
 var $status : Object
 var $error : Boolean
@@ -14,9 +13,12 @@ If (Count parameters=1)
 	OK:=1
 Else 
 	$lock:=Form.btnProtect.protect
-	$lockStatus:=$lock ? "lock" : "unlock" 
 	If (Form.invoice_items.length>1)
-		CONFIRM("Do you want to "+$lockStatus+" "+String(Form.invoice_items.length)+" invoices ? (auto save !)"; "Yes"; "No")
+		If ($lock)
+			CONFIRM(L10n("trConfirmLockInvoices"; String(Form.invoice_items.length)); L10n("trBtnYes"); L10n("trBtnNo"))
+		Else 
+			CONFIRM(L10n("trConfirmUnlockInvoices"; String(Form.invoice_items.length)); L10n("trBtnYes"); L10n("trBtnNo"))
+		End if 
 	Else 
 		OK:=1
 	End if 
@@ -44,5 +46,5 @@ If (OK=1)
 End if 
 
 If ($error)
-	ALERT("One or more invoices not edited correctly")
+	ALERT(L10n("trMsgLockFailed"))
 End if 

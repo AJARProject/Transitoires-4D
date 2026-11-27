@@ -14,7 +14,7 @@ Case of
 		
 	: (Form event code=On Mouse Enter)
 		If (OBJECT Get enabled(*; "btnPrint"))
-			Form.tipPrint.TextLabel("Print Selection")
+			Form.tipPrint.TextLabel(L10n("trTipPrintSelection"))
 			Form.tipPrint.Show()
 		End if 
 		

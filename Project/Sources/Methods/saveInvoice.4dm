@@ -10,7 +10,7 @@ var $pos : Integer
 var $invoices : Collection
 
 If (Not(Macintosh option down))
-	CONFIRM("Do you want to Save the invoice : "+Form.currentInvoice.invoice_ref; "YES"; "NO")
+	CONFIRM(L10n("trConfirmSaveInvoice"; Form.currentInvoice.invoice_ref); L10n("trBtnYes"); L10n("trBtnNo"))
 End if 
 
 If (OK=1)
@@ -32,10 +32,10 @@ If (OK=1)
 				checkYear(Year of(Form.invoice_item.invoice_date); True)
 				Form.btnSave.Enable(False)
 			Else 
-				ALERT("Error, Invoice can't be edited")
+				ALERT(L10n("trMsgSaveFailed"))
 			End if 
 		Else 
-			ALERT("Unknow UUID")
+			ALERT(L10n("trMsgUnknownUUID"))
 		End if 
 	Else 
 		$invoiceNew:=ds.invoice.new()

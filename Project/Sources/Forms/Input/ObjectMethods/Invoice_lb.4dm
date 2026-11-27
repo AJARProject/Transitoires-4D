@@ -10,11 +10,13 @@ Case of
 	: ($evt=On Clicked) && (Contextual click)
 		If (Form.invoice_items.length>=1)
 			$refMenu:=Create menu
-			APPEND MENU ITEM($refMenu; "Lock selection")
+			  // * : the translated text is taken literally, without menu metacharacters.
+			  // https://developer.4d.com/docs/21-R4/commands/append-menu-item
+			APPEND MENU ITEM($refMenu; L10n("trMenuLockSelection"); ""; 0; *)
 			SET MENU ITEM PARAMETER($refMenu; -1; "lock")
-			APPEND MENU ITEM($refMenu; "Unlock selection")
+			APPEND MENU ITEM($refMenu; L10n("trMenuUnlockSelection"); ""; 0; *)
 			SET MENU ITEM PARAMETER($refMenu; -1; "unlock")
-			APPEND MENU ITEM($refMenu; "Delete selection")
+			APPEND MENU ITEM($refMenu; L10n("trMenuDeleteSelection"); ""; 0; *)
 			SET MENU ITEM PARAMETER($refMenu; -1; "delete")
 			
 			$choix:=Dynamic pop up menu($refMenu)
